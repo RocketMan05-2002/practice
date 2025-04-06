@@ -1,20 +1,19 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 import { BsArrowLeftCircleFill,BsArrowRightCircleFill } from 'react-icons/bs'
 import './slider.css'
 
-export default function ImageSlider({url,limit,page}){
+export default function ImageSlider({ url,limit,page }){
 
     const[images,setImages] = useState([]);
-    const[currentSlide,setCurrentSlide] = useState(0);
-    const[errorMsg,setErrorMsg] = useState("");
+    const[current,setCurrent] = useState(0);
     const[loading,setLoading] = useState(false);
+    const[errorMsg,setErrorMsg] = useState(null);
 
     async function fetchImages(url){
         try{
             setLoading(true);
             const response = await fetch(`${url}?page=${page}&limit=${limit}`);
             const data = await response.json();
-            console.log(data);
             if(data && data.length){
                 setImages(data);
                 setLoading(false);
@@ -23,41 +22,52 @@ export default function ImageSlider({url,limit,page}){
             setErrorMsg(e.message);
             setLoading(false);
         }
-    };
+    }
+
+    function handlePrevious(){
+        setCurrent(current===0?images.length-1:current-1);
+    }
+    function handleNext(){
+        setCurrent(current===images.length-1?0:current+1);
+    }
 
     useEffect(()=>{
-        if(url!=='') fetchImages(url);
+        if(url) fetchImages(url);
     },[url]);
 
-    if(loading) return <div>Loading please wait!</div>;
-    if(errorMsg) return <div>Error Occurred: {errorMsg}</div>;
+    if(loading) return <div>Loading...please wait</div>;
+    if(errorMsg) return <div>Error occurred: {errorMsg}</div>
 
-    return <div className="slider">
-        <BsArrowLeftCircleFill className='arrow arrow-left' />
-        {
-            images && images.length ?
-            images.map((item)=>
-            <img
-            key={item.id}
-            alt={item.download_url}
-            src={item.download_url}
-            className={item.id === currentSlide ? "current-image": "current-image disable-image"}
+    return (
+        <div className="slider__container">
+            <BsArrowLeftCircleFill className="arrow arrow-left" 
+            onClick={handlePrevious}
             />
-            )
-            :null
-        }
-        <BsArrowRightCircleFill className='arrow arrow-right' />
-        <span className='circle-indicators'>
             {
-                images && images.length ?
-                images.map((_,index)=><button
-                key={index}
-                className={index === currentSlide ? 'current-indicator': "current-indicator inactive"}
-                onClick={()=>setCurrentSlide(index)}
-                >
-                </button>)
+                images && images.length ? 
+                images.map((item,ind)=>{
+                    return <img 
+                    key={item.id}
+                    alt={item.download_url}
+                    src={item.download_url}
+                    className={current===ind?"current-image":"current-image hide-current-image"}
+                    />
+                })
                 :null
             }
-        </span>
-    </div>
+            <BsArrowRightCircleFill className="arrow arrow-right" onClick={handleNext}/>
+            <div className="circle-indicators">
+                {
+                    images && images.length ? 
+                    images.map((_,ind)=><button
+                    key={ind}
+                    className={current===ind?"current-indicator":"current-indicator inactive-indicator"}
+                    onClick={()=>setCurrent(ind)}
+                    >
+                    </button>)
+                    :null
+                }
+            </div>
+        </div>
+    )
 }

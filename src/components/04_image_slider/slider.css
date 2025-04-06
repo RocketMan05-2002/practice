@@ -1,4 +1,10 @@
-.slider{
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.slider__container{
     position: relative;
     display: flex;
     justify-content: center;
@@ -14,8 +20,8 @@
 }
 .arrow{
     position: absolute;
-    width: 2rem;
     height: 2rem;
+    width: 2rem;
     color: #fff;
     filter: drop-shadow(0 0 5px #555);
 }
@@ -29,18 +35,20 @@
     display: flex;
     position: absolute;
     bottom: 1rem;
-    gap: 10px;
 }
 .current-indicator{
-    background-color: white;
+    background-color: #fff;
     height: 15px;
     width: 15px;
     border-radius: 50%;
     border: none;
+    outline: none;
+    margin: 0 0.2rem;
+    cursor: pointer;
 }
-.inactive{
-    background-color: #667;
+.inactive-indicator{
+    background-color: gray;
 }
-.disable-image{
+.hide-current-image{
     display: none;
 }
