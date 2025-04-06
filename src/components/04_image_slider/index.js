@@ -9,7 +9,7 @@ export default function ImageSlider({ url,limit,page }){
     const[loading,setLoading] = useState(false);
     const[errorMsg,setErrorMsg] = useState(null);
 
-    async function fetchImages(url){
+    async function fetchImages(){
         try{
             setLoading(true);
             const response = await fetch(`${url}?page=${page}&limit=${limit}`);
@@ -31,9 +31,19 @@ export default function ImageSlider({ url,limit,page }){
         setCurrent(current===images.length-1?0:current+1);
     }
 
-    useEffect(()=>{
-        if(url) fetchImages(url);
-    },[url]);
+    useEffect(() => {
+        fetchImages();
+    }, []);
+    
+    useEffect(() => {
+        if (!images.length) return;
+    
+        const interval = setInterval(() => {
+            setCurrent(prev => (prev === images.length - 1 ? 0 : prev + 1));
+        }, 2000);
+    
+        return () => clearInterval(interval);
+    }, [images]);
 
     if(loading) return <div>Loading...please wait</div>;
     if(errorMsg) return <div>Error occurred: {errorMsg}</div>
