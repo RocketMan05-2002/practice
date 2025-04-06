@@ -1,9 +1,10 @@
-body{
+/* body{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
+} */
+ /* commented to stop it from affecting other component stylings */
 .slider__container{
     position: relative;
     display: flex;

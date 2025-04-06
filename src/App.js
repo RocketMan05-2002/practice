@@ -3,6 +3,7 @@ import Accordian from './components/01_accordian/inde'
 import RandomColor from './components/02_random_color_generator'
 import StarRating from './components/03_star_rating'
 import ImageSlider from './components/04_image_slider/index'
+import LoadMore from './components/05_load_more_button'
 
 const App = () => {
   return (
@@ -10,7 +11,8 @@ const App = () => {
         {/* <Accordian /> */}
         {/* <RandomColor /> */}
         {/* <StarRating noOfStars={10}/> */}
-        <ImageSlider url={"https://picsum.photos/v2/list"} limit={10} page={1} />
+        {/* <ImageSlider url={"https://picsum.photos/v2/list"} limit={10} page={1} /> */}
+        <LoadMore />
     </div>
   )
 }
