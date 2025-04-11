@@ -33,7 +33,7 @@ export default function ItemsManager() {
     if (e.keyCode === 13) {
       setNData([...nData, { id: new Date().getTime(), name: value }]);
       setShowinput(false);
-    setChangedVal("");
+      setChangedVal("");
     }
   }
 
