@@ -8,6 +8,9 @@ import LoadMore from "./components/05_load_more_button";
 import QRCodeGenerator from "./components/07_qr_code_generator";
 import ItemsManager from "./containers/01_items_manager";
 import Form from "./containers/02_form_useState";
+import Counter from "./containers/03_useReducer";
+import ReducerFetch from "./containers/04_useReducer_fetch";
+import A from "./containers/05_useContext";
 
 const App = () => {
   return (
@@ -19,9 +22,11 @@ const App = () => {
       {/* <LoadMore /> */}
       {/* <QRCodeGenerator /> */}
       {/* <ItemsManager /> */}
-      <Form />
+      {/* <Form /> */}
+      {/* <Counter /> */}
+      {/* <ReducerFetch /> */}
+      {/* <A /> */}
     </div>
   );
-};
-
+}
 export default App;

@@ -1,0 +1,16 @@
+li{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: rgb(185, 214, 214);
+    padding: 10px 20px;
+}
+button{
+    background-color: darkslategray;
+    color: white;
+    padding: 5px;
+    border-radius: 50px;
+}
+ul{
+    margin-top: 10px;
+}
