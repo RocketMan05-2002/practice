@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+h1{
+    background-color: antiquewhite;
+    color: black;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    margin: 20px 30px;
+    button{
+        width: 100px;
+        padding: 10px 20px;
+        margin-top: 30px;
+    }
+    div{
+        display: flex;
+        align-items: center;
+        width: 50%;
+        justify-content: space-between;
+        input{
+            border: 2px solid #ccc;
+        }
+    }
+}

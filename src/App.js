@@ -12,6 +12,7 @@ import Counter from "./containers/03_useReducer";
 import ReducerFetch from "./containers/04_useReducer_fetch";
 import A from "./containers/05_useContext";
 import RouterExample from "./containers/06_react_router/RouterExample";
+import FormVal from "./containers/07_form_validation_app/FormVal";
 
 const App = () => {
   return (
@@ -27,7 +28,8 @@ const App = () => {
       {/* <Counter /> */}
       {/* <ReducerFetch /> */}
       {/* <A /> */}
-      <RouterExample />
+      {/* <RouterExample /> */}
+      <FormVal />
     </div>
   );
 }
