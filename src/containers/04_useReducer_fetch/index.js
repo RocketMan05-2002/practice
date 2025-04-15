@@ -29,7 +29,7 @@ function reducer(state,action){
         case 'DELETE_DATA':
             return{
                 ...state,
-                data: state.data.filter((item)=>item.id!=action.payload)
+                data: state.data.filter((item)=>item.id!==action.payload)
             }
         case 'ADD_DATA':
             return{

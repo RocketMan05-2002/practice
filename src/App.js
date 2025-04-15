@@ -11,6 +11,7 @@ import Form from "./containers/02_form_useState";
 import Counter from "./containers/03_useReducer";
 import ReducerFetch from "./containers/04_useReducer_fetch";
 import A from "./containers/05_useContext";
+import RouterExample from "./containers/06_react_router/RouterExample";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
       {/* <Counter /> */}
       {/* <ReducerFetch /> */}
       {/* <A /> */}
+      <RouterExample />
     </div>
   );
 }
