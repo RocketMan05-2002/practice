@@ -1,18 +1,20 @@
 import React from "react";
 import "./App.css";
-import Accordian from "./components/01_accordian/inde";
-import RandomColor from "./components/02_random_color_generator";
-import StarRating from "./components/03_star_rating";
-import ImageSlider from "./components/04_image_slider/index";
-import LoadMore from "./components/05_load_more_button";
-import QRCodeGenerator from "./components/07_qr_code_generator";
-import ItemsManager from "./containers/01_items_manager";
-import Form from "./containers/02_form_useState";
-import Counter from "./containers/03_useReducer";
-import ReducerFetch from "./containers/04_useReducer_fetch";
-import A from "./containers/05_useContext";
-import RouterExample from "./containers/06_react_router/RouterExample";
-import FormVal from "./containers/07_form_validation_app/FormVal";
+// import Accordian from "./components/01_accordian/inde";
+// import RandomColor from "./components/02_random_color_generator";
+// import StarRating from "./components/03_star_rating";
+// import ImageSlider from "./components/04_image_slider/index";
+// import LoadMore from "./components/05_load_more_button";
+// import QRCodeGenerator from "./components/07_qr_code_generator";
+// import ItemsManager from "./containers/01_items_manager";
+// import Form from "./containers/02_form_useState";
+// import Counter from "./containers/03_useReducer";
+// import ReducerFetch from "./containers/04_useReducer_fetch";
+// import A from "./containers/05_useContext";
+// import RouterExample from "./containers/06_react_router/RouterExample";
+// import FormVal from "./containers/07_form_validation_app/FormVal";
+// import UseFormTest from "./containers/08_useForm";
+import UseMemoExp from "./containers/09_useMemo/useMemoSolution";
 
 const App = () => {
   return (
@@ -29,7 +31,9 @@ const App = () => {
       {/* <ReducerFetch /> */}
       {/* <A /> */}
       {/* <RouterExample /> */}
-      <FormVal />
+      {/* <FormVal /> */}
+      {/* <UseFormTest /> */}
+      <UseMemoExp />
     </div>
   );
 }
