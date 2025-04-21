@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import ItemLog from "./containers/01a_items_manager/App";
 // import Accordian from "./components/01_accordian/inde";
 // import RandomColor from "./components/02_random_color_generator";
 // import StarRating from "./components/03_star_rating";
@@ -14,7 +15,8 @@ import "./App.css";
 // import RouterExample from "./containers/06_react_router/RouterExample";
 // import FormVal from "./containers/07_form_validation_app/FormVal";
 // import UseFormTest from "./containers/08_useForm";
-import UseMemoExp from "./containers/09_useMemo/useMemoSolution";
+// import UseMemoExp from "./containers/09_useMemo/useMemoSolution";
+// import UseContextExp from "./containers/10_useCallback";
 
 const App = () => {
   return (
@@ -33,7 +35,9 @@ const App = () => {
       {/* <RouterExample /> */}
       {/* <FormVal /> */}
       {/* <UseFormTest /> */}
-      <UseMemoExp />
+      {/* <UseMemoExp /> */}
+      {/* <UseContextExp /> */}
+      <ItemLog />
     </div>
   );
 }
