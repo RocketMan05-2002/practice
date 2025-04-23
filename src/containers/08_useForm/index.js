@@ -1,23 +1,24 @@
-import React from 'react'
-import { useForm } from 'react-hook-form';
+import React from "react";
+import { useForm } from "react-hook-form";
 
 const UseFormTest = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    formState: { errors },
   } = useForm();
 
-  const onSubmit = data => console.log(data);
+  const onSubmit = (data) => console.log(data);
 
   return (
-    <div className='container'>
+    <div className="container">
       <h1>Form Validation</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label>Name:</label>
           <input
-            type='text' name='name'
+            type="text"
+            name="name"
             {...register("name", { required: "Name is Required" })}
           />
           {errors.name && <span>{errors.name.message}</span>}
@@ -26,7 +27,8 @@ const UseFormTest = () => {
         <div>
           <label>Email:</label>
           <input
-            type='email' name='email'
+            type="email"
+            name="email"
             {...register("email", { required: "Email is Required" })}
           />
           {errors.email && <span>{errors.email.message}</span>}
@@ -35,7 +37,8 @@ const UseFormTest = () => {
         <div>
           <label>Password:</label>
           <input
-            type='password' name='password'
+            type="password"
+            name="password"
             {...register("password", { required: "Password is Required" })}
           />
           {errors.password && <span>{errors.password.message}</span>}
@@ -44,16 +47,22 @@ const UseFormTest = () => {
         <div>
           <label>Confirm Password:</label>
           <input
-            type='password' name='confirmPassword'
-            {...register("confirmPassword", { required: "Please confirm password" })}
+            type="password"
+            name="confirmPassword"
+            {...register("confirmPassword", {
+              required: "Please confirm password",
+            })}
           />
-          {errors.confirmPassword && <span>{errors.confirmPassword.message}</span>}
+          {errors.confirmPassword && (
+            <span>{errors.confirmPassword.message}</span>
+          )}
         </div>
 
         <div>
           <label>Age:</label>
           <input
-            type='number' name='age'
+            type="number"
+            name="age"
             {...register("age", { required: "Age is Required" })}
           />
           {errors.age && <span>{errors.age.message}</span>}
@@ -61,7 +70,8 @@ const UseFormTest = () => {
 
         <div>
           <label>Gender:</label>
-          <select name='gender'
+          <select
+            name="gender"
             {...register("gender", { required: "Please select a gender" })}
           >
             <option value="">Select Gender</option>
@@ -71,10 +81,10 @@ const UseFormTest = () => {
           {errors.gender && <span>{errors.gender.message}</span>}
         </div>
 
-        <button type='submit'>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
-  )
-}
+  );
+};
 
 export default UseFormTest;
