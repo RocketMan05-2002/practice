@@ -1,8 +1,8 @@
-// usememo se we can avoid un necessary. performance.
+// usememo se we can avoid unnecessary calculations. performance optimization.
 // memo - memoization
 // agar aapke paas koi problem statement aati h, agar wo pehle se solved nhi h toh solve karlo 
 // aur answer ko store karlo
-// if its solved alerady, dont do calculatiosn again, the answer is stored already.
+// if its solved alerady, dont do calculations again, the answer is stored already.
 // sometimes we have expensive operations in our application
 // unko prevent karneka ka kaam -> useMemo hook karta hein
 
