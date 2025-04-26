@@ -1,18 +1,15 @@
+import React from "react";
 
-import React from 'react'
+const ChildComp = React.memo((props) => {
+  console.log("Child component got rerendered");
+  return (
+    <div>
+      <button onClick={props.handleClick}>{props.buttonName}</button>
+    </div>
+  );
+});
 
-const ChildComp = React.memo(
-    (props) => {
-        console.log("Child component got rerendered");
-      return (
-        <div>
-          <button onClick={props.handleClick}>{props.buttonName}</button>
-        </div>
-      )
-    }
-)
-
-export default ChildComp
+export default ChildComp;
 
 /*
 
