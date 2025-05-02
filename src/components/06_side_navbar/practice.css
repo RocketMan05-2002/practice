@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 20%;
+}
+.folder{
+    background-color: #d9ceb7;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.folder button{
+    padding: 5px 8px;
+    background-color: rgb(202, 202, 141);
+    margin-right: 10px;
+}
+.file{
+    width: 400px;
+    background-color: #e8e5e5;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(206, 206, 173);
+    border: 1px solid black;
+}
+.input-container{
+    margin: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    input{
+        padding: 5px;
+    }
+}

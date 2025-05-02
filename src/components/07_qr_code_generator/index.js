@@ -7,6 +7,13 @@ export default function QRCodeGenerator() {
 
   function handleGenerateQrCode() {
     setQrCode(input);
+    setInput('');
+  }
+  function handleEnterQR(e){
+    if(e.keyCode === 13 && e.target.value){
+      setQrCode(input);
+      setInput('');
+    }
   }
 
   return (
@@ -18,6 +25,7 @@ export default function QRCodeGenerator() {
           type="text"
           name="qr-code"
           placeholder="enter your value here..."
+          onKeyDown={handleEnterQR}
         />
         <button onClick={handleGenerateQrCode}>Generate</button>
       </div>
