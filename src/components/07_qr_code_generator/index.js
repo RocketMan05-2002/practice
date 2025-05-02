@@ -7,12 +7,12 @@ export default function QRCodeGenerator() {
 
   function handleGenerateQrCode() {
     setQrCode(input);
-    setInput('');
+    setInput("");
   }
-  function handleEnterQR(e){
-    if(e.keyCode === 13 && e.target.value){
+  function handleEnterQR(e) {
+    if (e.keyCode === 13 && e.target.value) {
       setQrCode(input);
-      setInput('');
+      setInput("");
     }
   }
 
