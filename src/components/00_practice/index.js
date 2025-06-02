@@ -1,5 +1,79 @@
+import { useEffect, useState } from 'react'
+import './practice.css'
 
+const digitMap = {
+    0: [0,1,2,3,4,5],
+    1: [1,2],
+    2: [0,1,6,4,3],
+    3: [0,1,6,2,3],
+    4: [5,6,1,2],
+    5: [0,5,6,2,3],
+    6: [0,5,6,4,2,3],
+    7: [0,1,2],
+    8: [0,1,2,3,4,5,6],
+    9: [0,1,2,3,5,6]
+};
 
 export default function Practice(){
-    return <div></div>
+
+    const[leftOrder, setLeftOrder] = useState([]);
+    const[rightOrder, setRightOrder] = useState([]);
+
+    const[input,setInput] = useState(null);
+    const[showInput, setShowInput] = useState(null);
+
+    function onAddValue(e){
+        if(e.keyCode === 13 && e.target.value){
+            setInput(Number(e.target.value));
+        }
+    }
+
+    useEffect(()=>{
+        if(!input || input<1 || input>99) return;
+        let current = input;
+
+        const timer = setInterval(()=>{
+            const left = Math.floor(current/10);
+            const right = current%10;
+
+            setLeftOrder(digitMap[left] || []);
+            setRightOrder(digitMap[right]|| []);
+            setShowInput(current);
+            current--;
+            if(current<1){
+                clearInterval(timer);
+                setTimeout(()=>{
+                    setLeftOrder([]);
+                    setRightOrder([]);
+                    setShowInput(0);
+                },1000);
+            }
+        },1000);
+
+        return ()=>clearInterval(timer);
+    },[input]);
+
+
+
+    return <div className="wrapper">
+        <h1 style={{ color: "red" }}>traffic lights simulator</h1>
+        <input min={1} max={99} placeholder='enter number to countdown' onKeyDown={onAddValue} />
+        <div className='gridContainer'>
+            <div className='seven-segment'>
+                {
+                    [...Array(7)].map((_,ind)=>(
+                        <div className={`segment segment-${ind} ${leftOrder.includes(ind)?"on":""} `}></div>
+                    ))
+                }
+            </div>
+            <div className='seven-segment'>
+                {
+                    [...Array(7)].map((_,ind)=>(
+                        <div className={`segment segment-${ind} ${rightOrder.includes(ind)?"on":""} `}></div>
+                    ))
+                }
+            </div>
+        </div>
+        <h1 style={{ color:"red" }}>{showInput}</h1>
+    </div>
 }
