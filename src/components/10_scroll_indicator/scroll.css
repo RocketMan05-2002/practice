@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+.top-container{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    background-color: #075b0a;
+    color: #000000;
+    h1{
+        padding: 20px;
+    }
+}
+.scroll-container{
+    width: 100%;
+    height: 10px;
+    background-color: #ccc;
+}
+/* NEW: Background gradient for bars */
+.gradient-bg {
+  background: linear-gradient(
+    to right,
+    #008baa,
+    #7e42a7,
+    #6600c5,
+    #6070fd,
+    #2a46ff,
+    #0099ff,
+    #008ead
+  );
+  background-size: 200%;
+  animation: animate-gradient 2.5s linear infinite;
+}
+
+@keyframes animate-gradient {
+  to {
+    background-position: 200%;
+  }
+}
+
+.scroll-progress-bar {
+  height: 10px;
+  width: 0%;
+}
+.scroll-progress-bar{
+    background-color: black;
+    width: 0%;
+    height: 10px;
+}
+.data-container{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p{
+        background-color: #ccc;
+        margin-bottom: 5px;
+        width: 900px;
+        padding: 5px;
+    }
+}
