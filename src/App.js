@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css";
+import Theme from "./components/09_light_dark_mode";
 // import ItemLog from "./containers/01a_items_manager/App";x
-import Practice from "./components/00_practice";
+// import Practice from "./components/00_practice";
 // import Like from "./components/08_like_button";
 // import Accordian from "./components/01_accordian/inde";
 // import RandomColor from "./components/02_random_color_generator";
@@ -40,9 +41,10 @@ const App = () => {
       {/* <UseMemoExp /> */}
       {/* <UseContextExp /> */}
       {/* <ItemLog /> */}
-      <Practice/>
       {/* <Like /> */}
       {/* <Home /> */}
+      {/* <Practice/> */}
+      <Theme />
     </div>
   );
 };
