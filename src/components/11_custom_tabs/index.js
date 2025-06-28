@@ -1,4 +1,5 @@
 import Tabs from "./components/Tabs"
+import "./tabs.css"
 
 export default function Tabstest(){
 

@@ -5,7 +5,7 @@ export default function Tabs({tabsContent}){
 
     const[currentTab, setCurrentTab] = useState(0);
 
-    return <div>
+    return <div className="tabsContainer">
         <div className="heading">
             {
                 tabsContent.map((item,ind)=>(
