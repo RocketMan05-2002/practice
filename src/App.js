@@ -3,7 +3,7 @@ import "./App.css";
 // import Theme from "./components/09_light_dark_mode";
 // import ItemLog from "./containers/01a_items_manager/App";x
 import Practice from "./components/00_practice";
-import Scroll from "./components/10_scroll_indicator";
+// import Scroll from "./components/10_scroll_indicator";
 // import Like from "./components/08_like_button";
 // import Accordian from "./components/01_accordian/inde";
 // import RandomColor from "./components/02_random_color_generator";
@@ -44,9 +44,9 @@ const App = () => {
       {/* <ItemLog /> */}
       {/* <Like /> */}
       {/* <Home /> */}
-      {/* <Practice /> */}
+      <Practice />
       {/* <Theme /> */}
-      <Scroll />
+      {/* <Scroll /> */}
     </div>
   );
 };
