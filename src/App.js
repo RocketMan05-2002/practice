@@ -4,6 +4,7 @@ import "./App.css";
 // import ItemLog from "./containers/01a_items_manager/App";x
 import Practice from "./components/00_practice";
 import Tabstest from "./components/11_custom_tabs";
+import Modaltest from "./components/12_custom_modal_popup";
 // import Scroll from "./components/10_scroll_indicator";
 // import Like from "./components/08_like_button";
 // import Accordian from "./components/01_accordian/inde";
@@ -48,7 +49,8 @@ const App = () => {
       {/* <Practice /> */}
       {/* <Theme /> */}
       {/* <Scroll /> */}
-      <Tabstest />
+      {/* <Tabstest /> */}
+      <Modaltest />
     </div>
   );
 };
