@@ -1,36 +1,37 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    button{
-        padding: 10px 20px;
-        border-radius: 50px;
-        margin-bottom: 20px;
-        cursor: pointer;
-    }
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
 }
-.modal{
-    background-color: red;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+.modal {
+  background-color: red;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
-.header{
-    text-align: center;
-    span{
-        background-color: yellow;
-        padding: 10px;
-        border: 2px solid black;
-        cursor: pointer;
-    }
+.header {
+  text-align: center;
+  span {
+    background-color: yellow;
+    padding: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+  }
 }
