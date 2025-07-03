@@ -5,6 +5,7 @@ import "./App.css";
 import Practice from "./components/00_practice";
 import Tabstest from "./components/11_custom_tabs";
 import Modaltest from "./components/12_custom_modal_popup";
+import LandingPage from "./components/00a_hollr_ai";
 // import Scroll from "./components/10_scroll_indicator";
 // import Like from "./components/08_like_button";
 // import Accordian from "./components/01_accordian/inde";
@@ -50,7 +51,8 @@ const App = () => {
       {/* <Theme /> */}
       {/* <Scroll /> */}
       {/* <Tabstest /> */}
-      <Modaltest />
+      {/* <Modaltest /> */}
+      <LandingPage />
     </div>
   );
 };
