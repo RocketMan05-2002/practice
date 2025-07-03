@@ -672,11 +672,24 @@ export default function LandingPage() {
           }
         }
       `}</style>
-      <div className="container" role="main" aria-label="Website Landing Page Dashboard">
+      <div
+        className="container"
+        role="main"
+        aria-label="Website Landing Page Dashboard"
+      >
         <aside className="sidebar" aria-label="Sidebar menu">
           <div className="sidebar-top">
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
-              <div className="logo-circle" aria-hidden="true">C</div>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+                marginBottom: 14,
+              }}
+            >
+              <div className="logo-circle" aria-hidden="true">
+                C
+              </div>
               <select
                 className="campaign-select"
                 aria-label="Select call campaign"
@@ -691,7 +704,7 @@ export default function LandingPage() {
                 className="copy-btn"
                 aria-label="Copy campaign link"
                 onClick={() => {
-                  navigator.clipboard.writeText('https://myapp.com/campaign');
+                  navigator.clipboard.writeText("https://myapp.com/campaign");
                   alert("Link copied to clipboard");
                 }}
               >
@@ -731,7 +744,12 @@ export default function LandingPage() {
               </div>
               <div className="menu-section" aria-label="More Options Menu">
                 {moreItems.map((item) => (
-                  <div key={item.label} className="menu-item" tabIndex={0} role="link">
+                  <div
+                    key={item.label}
+                    className="menu-item"
+                    tabIndex={0}
+                    role="link"
+                  >
                     {item.icon}
                     <span>{item.label}</span>
                   </div>
@@ -747,12 +765,17 @@ export default function LandingPage() {
               tabIndex={0}
               aria-label="Send feedback"
               onClick={() => alert("Feedback feature coming soon!")}
-              onKeyDown={(e) => e.key === "Enter" && alert("Feedback feature coming soon!")}
+              onKeyDown={(e) =>
+                e.key === "Enter" && alert("Feedback feature coming soon!")
+              }
             >
               <FiMessageCircle aria-hidden="true" />
               <span>Feedback</span>
             </div>
-            <div className="plan-box" aria-label="Current subscription plan information">
+            <div
+              className="plan-box"
+              aria-label="Current subscription plan information"
+            >
               <div className="plan-current">
                 Current Plan: <strong>Free</strong>
               </div>
@@ -762,8 +785,16 @@ export default function LandingPage() {
                   style={{ width: `${planProgress}%` }}
                 ></div>
               </div>
-              <div style={{ display: "flex", justifyContent: "space-between", fontWeight: "600", color: "#627296", fontSize: "0.85rem" }}>
-                <span>{planProgress / 20 * 5}/5</span>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  fontWeight: "600",
+                  color: "#627296",
+                  fontSize: "0.85rem",
+                }}
+              >
+                <span>{(planProgress / 20) * 5}/5</span>
                 <button
                   className="upgrade-button"
                   aria-label="Upgrade plan"
@@ -773,7 +804,8 @@ export default function LandingPage() {
                 </button>
               </div>
               <div className="online-status">
-                <span className="online-icon" aria-hidden="true"></span> All services are online
+                <span className="online-icon" aria-hidden="true"></span> All
+                services are online
               </div>
             </div>
           </div>
@@ -791,7 +823,11 @@ export default function LandingPage() {
                 <FiSun />
               </button>
 
-              <button className="header-profile" aria-label="User profile" type="button">
+              <button
+                className="header-profile"
+                aria-label="User profile"
+                type="button"
+              >
                 <FaUserCircle aria-hidden="true" />
               </button>
             </div>
@@ -811,7 +847,10 @@ export default function LandingPage() {
               <FiPhone className="banner-icon" aria-hidden="true" />
               <div className="banner-text">
                 <strong>Get a Virtual Phone Number</strong>
-                <small>Link a virtual phone number to your account and let your AI assistant handle calls effortlessly, 24/7.</small>
+                <small>
+                  Link a virtual phone number to your account and let your AI
+                  assistant handle calls effortlessly, 24/7.
+                </small>
               </div>
               <button
                 className="banner-btn"
@@ -824,24 +863,35 @@ export default function LandingPage() {
           </section>
 
           {/* Stats Cards */}
-          <section
-            className="stats-cards"
-            aria-label="Call statistics summary"
-          >
+          <section className="stats-cards" aria-label="Call statistics summary">
             {statsCards.map(({ title, icon, value, description }) => (
-              <article key={title} className="stats-card" tabIndex={0} aria-label={title}>
+              <article
+                key={title}
+                className="stats-card"
+                tabIndex={0}
+                aria-label={title}
+              >
                 <header className="stats-header">
                   <span>{title}</span>
                   <span className="stats-icon">{icon}</span>
                 </header>
-                <div className="stats-value" aria-live="polite" aria-atomic="true">{value}</div>
+                <div
+                  className="stats-value"
+                  aria-live="polite"
+                  aria-atomic="true"
+                >
+                  {value}
+                </div>
                 <p className="stats-desc">{description}</p>
               </article>
             ))}
           </section>
 
           {/* Bottom cards */}
-          <section className="bottom-cards" aria-label="Additional content section">
+          <section
+            className="bottom-cards"
+            aria-label="Additional content section"
+          >
             <article
               className="bottom-card"
               aria-label="Monthly call trends chart"
@@ -850,16 +900,17 @@ export default function LandingPage() {
                 Monthly Call Trends
                 <small>Number of calls per month.</small>
               </div>
-              <div className="chart-placeholder" aria-hidden="true" title="Monthly Call Trends chart placeholder">
+              <div
+                className="chart-placeholder"
+                aria-hidden="true"
+                title="Monthly Call Trends chart placeholder"
+              >
                 {/* Chart can be added here if data available */}
                 Chart placeholder
               </div>
             </article>
 
-            <article
-              className="bottom-card"
-              aria-label="Recent calls"
-            >
+            <article className="bottom-card" aria-label="Recent calls">
               <div className="bottom-card-header">
                 Recent Calls
                 <span
@@ -867,13 +918,19 @@ export default function LandingPage() {
                   role="link"
                   tabIndex={0}
                   onClick={() => alert("View all recent calls clicked")}
-                  onKeyDown={(e) => e.key === "Enter" && alert("View all recent calls clicked")}
+                  onKeyDown={(e) =>
+                    e.key === "Enter" && alert("View all recent calls clicked")
+                  }
                   aria-label="View all recent calls"
                 >
                   View All &#8599;
                 </span>
               </div>
-              <div className="recent-calls-placeholder" aria-hidden="true" title="Recent Calls placeholder">
+              <div
+                className="recent-calls-placeholder"
+                aria-hidden="true"
+                title="Recent Calls placeholder"
+              >
                 {/* Recent calls would show here */}
                 No recent calls available.
               </div>
@@ -884,4 +941,3 @@ export default function LandingPage() {
     </>
   );
 }
-
